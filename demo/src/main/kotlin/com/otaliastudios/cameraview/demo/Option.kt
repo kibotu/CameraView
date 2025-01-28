@@ -27,7 +27,7 @@ abstract class Option<T: Any>(val name: String) {
     abstract fun set(view: CameraView, value: T)
 
     open fun toString(value: T): String {
-        return "$value".replace("_", "_").toLowerCase()
+        return "$value".replace("_", "_").lowercase()
     }
 
     class Width : Option<Int>("Width") {
